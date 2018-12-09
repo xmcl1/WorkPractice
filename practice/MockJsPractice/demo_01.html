@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../../MockJs/Mock/dist/mock.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		var data = Mock.mock({
+		    'list|1-10': [{
+		        'id|+1': 1,
+		        'regexp1': /[a-z][A-Z][0-9]/,
+		        'regexp3': /\d{5,10}/
+		    }]
+		});
+		var d1 = Mock.Random.first()
+		var d2 = Mock.Random.last()
+		var dn3 = Mock.Random.name()
+
+		var c1 = Mock.Random.cfirst()
+		var c2 = Mock.Random.clast()
+		var cn3 = Mock.Random.cname()
+
+		var cl1 = Mock.Random.image()
+		var cl2 = Mock.Random.image('200x100', '#ffcc33', '#FFF', 'png', '!')
+
+		var p1 = Mock.Random.paragraph()
+
+		var r1 = Mock.Random.province()
+		var r2 = Mock.Random.city()
+		var r3 = Mock.Random.county()
+		var r4 = Mock.Random.zip()
+
+		var guid1 = Mock.Random.guid()
+
+		var id = Mock.Random.id()
+
+		var dt = Mock.Random.datetime()
+
+
+		console.log(data.list)
+		console.log(d1+' '+d2+'\n'+dn3)
+
+		console.log(c1+c2+'\n'+cn3)
+
+		console.log(cl1)
+		console.log(cl2)
+
+		console.log(p1)
+
+		console.log(r1+' '+r2+' '+r3+'\n'+r4)
+
+		console.log(guid1)
+		console.log(id)
+
+		console.log(dt)
+
+	</script>
+</body>
+</html>
